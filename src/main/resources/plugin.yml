@@ -1,0 +1,20 @@
+name: LankciAccount
+version: 1.0.0
+main: com.lankciworld.account.LankciAccountPlugin
+api-version: '1.21'
+description: Зв'язок сервера LankciWorld із сайтом (прив'язка ніка, захист входу, блокування).
+author: LankciWorld
+softdepend: [AuthMe]
+
+commands:
+  link:
+    description: Підтвердити або відхилити прив'язку ніка до акаунта сайту
+    usage: /link <accept|deny> [нік на сайті]
+  lwaccount:
+    description: Службова команда LankciAccount
+    usage: /lwaccount <status|reload|debug>
+
+permissions:
+  lankciaccount.admin:
+    description: Доступ до /lwaccount
+    default: op
